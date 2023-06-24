@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
 			font-family: OpenSans,serif;
     }
+    &a {
+      text-decoration: none;
+			color: black;
+    }
 `;
 
 export default withTheme(GlobalStyle);

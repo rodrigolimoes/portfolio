@@ -13,8 +13,12 @@ const ListItem = styled.ul`
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	& li {
-		padding: 0 10px;
+`;
+
+const Item = styled.li`
+	padding: 0 10px;
+	&:hover {
+		color: ${props => props.theme.main};
 	}
 `;
 
@@ -32,9 +36,15 @@ const HeaderApp: FC<HeaderAppProps> = () => {
 		<Header>
 			<Logo>{`<RL/>`}</Logo>
 			<ListItem>
-				<li>Home</li>
-				<li>About</li>
-				<li>Projetos</li>
+				<a href="https://google.com">
+					<Item>Home</Item>
+				</a>
+				<a href="https://google.com">
+					<Item>About</Item>
+				</a>
+				<a href="https://google.com">
+					<Item>Projetos</Item>
+				</a>
 			</ListItem>
 		</Header>
 	);
