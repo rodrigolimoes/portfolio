@@ -23,4 +23,14 @@ export const Icons = styled.div`
 	align-items: center;
 	justify-content: space-around;
 	margin-top: 20px;
+
+	i {
+		font-size: 2rem;
+		cursor: pointer;
+		transition: transform 1.5s;
+
+		&:hover {
+			transform: rotateY(360deg);
+		}
+	}
 `;
