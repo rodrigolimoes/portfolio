@@ -5,6 +5,9 @@ const Header = styled.header`
 	display: flex;
 	padding: 20px;
 	justify-content: space-between;
+	background-color: white;
+	position: sticky;
+	top: 0;
 `;
 
 const ListItem = styled.ul`
@@ -36,13 +39,13 @@ const HeaderApp: FC<HeaderAppProps> = () => {
 		<Header>
 			<Logo>{`<RL/>`}</Logo>
 			<ListItem>
-				<a href="https://google.com">
+				<a href="#home">
 					<Item>Home</Item>
 				</a>
 				<a href="https://google.com">
 					<Item>About</Item>
 				</a>
-				<a href="https://google.com">
+				<a href="#projetos">
 					<Item>Projetos</Item>
 				</a>
 			</ListItem>
