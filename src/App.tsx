@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 function App() {
 	return (
-		<ThemeProvider theme={{}}>
+		<ThemeProvider theme={{ main: 'royalblue' }}>
 			<GlobalStyle />
 			<HeaderApp />
 		</ThemeProvider>

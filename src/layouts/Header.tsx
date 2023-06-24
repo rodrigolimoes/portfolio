@@ -18,6 +18,10 @@ const ListItem = styled.ul`
 	}
 `;
 
+const Logo = styled.strong`
+	color: ${props => props.theme.main};
+`;
+
 interface HeaderAppStateProps {}
 interface HeaderAppDispatchProps {}
 
@@ -26,7 +30,7 @@ type HeaderAppProps = HeaderAppStateProps & HeaderAppDispatchProps;
 const HeaderApp: FC<HeaderAppProps> = () => {
 	return (
 		<Header>
-			<div>{`<RL/>`}</div>
+			<Logo>{`<RL/>`}</Logo>
 			<ListItem>
 				<li>Home</li>
 				<li>About</li>
