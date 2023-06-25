@@ -8,7 +8,7 @@ const Header = styled.header`
 	padding: 0;
 	margin: 0;
 	justify-content: space-between;
-	background-color: white;
+	background-color: #e6fdff;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -23,15 +23,23 @@ const ListItem = styled.ul`
 `;
 
 const Item = styled.li`
+	color: white;
 	padding: 0 10px;
+	margin-left: 5px;
+	background-color: ${props => props.theme.main};
+
+	border-radius: 50px;
+
 	&:hover {
 		color: ${props => props.theme.main};
+		background-color: white;
 	}
 `;
 
-const Logo = styled.strong`
+const Logo = styled.h3`
+	font-weight: 700;
 	color: ${props => props.theme.main};
-	padding: 20px;
+	padding: 0 20px;
 `;
 
 interface HeaderAppStateProps {}

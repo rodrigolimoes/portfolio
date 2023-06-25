@@ -7,27 +7,35 @@ export const Content = styled.section`
 	padding: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
-	height: 85vh;
+	height: 95vh;
+	text-align: center;
 `;
 
 export const HomeTitle = styled.h1`
-	font-size: 4rem;
+	display: inline-block;
+	font-size: 3.5rem;
 	font-weight: 800;
 	padding: 0;
-	margin: 0;
+	margin: -14px 0 -30px 0;
+	color: ${props => props.theme.main};
+`;
+
+export const Paragraph = styled.p<{ margin: string }>`
+	margin: ${props => props.margin};
 `;
 
 export const Icons = styled.div`
 	width: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	margin-top: 20px;
+	justify-content: center;
+	margin-top: 15px;
 
 	i {
 		font-size: 2rem;
 		cursor: pointer;
+		color: ${props => props.theme.main};
 		transition: transform 1.5s;
+		margin: 0 20px;
 
 		&:hover {
 			transform: rotateY(360deg);
