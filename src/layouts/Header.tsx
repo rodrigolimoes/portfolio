@@ -8,7 +8,7 @@ const Header = styled.header`
 	padding: 0;
 	margin: 0;
 	justify-content: space-between;
-	background-color: #e6fdff;
+	background-color: ${({ theme }) => theme.bg};
 	position: fixed;
 	top: 0;
 	width: 100%;
