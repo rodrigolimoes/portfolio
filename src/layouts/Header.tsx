@@ -1,13 +1,17 @@
-import React, { FC } from 'react';
-import { styled } from 'styled-components';
+import React, { FC, Fragment } from 'react';
+import styled from 'styled-components';
+import BarProgress from '../components/BarProgress';
+import { useScrollPercentage } from '../hooks/useScrollPercentage';
 
 const Header = styled.header`
 	display: flex;
-	padding: 20px;
+	padding: 0;
+	margin: 0;
 	justify-content: space-between;
 	background-color: white;
-	position: sticky;
+	position: fixed;
 	top: 0;
+	width: 100%;
 `;
 
 const ListItem = styled.ul`
@@ -15,7 +19,7 @@ const ListItem = styled.ul`
 	justify-content: space-evenly;
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: 20px;
 `;
 
 const Item = styled.li`
@@ -27,6 +31,7 @@ const Item = styled.li`
 
 const Logo = styled.strong`
 	color: ${props => props.theme.main};
+	padding: 20px;
 `;
 
 interface HeaderAppStateProps {}
@@ -35,21 +40,26 @@ interface HeaderAppDispatchProps {}
 type HeaderAppProps = HeaderAppStateProps & HeaderAppDispatchProps;
 
 const HeaderApp: FC<HeaderAppProps> = () => {
+	const scrollPercentage = useScrollPercentage();
+
 	return (
-		<Header>
-			<Logo>{`<RL/>`}</Logo>
-			<ListItem>
-				<a href="#home">
-					<Item>Home</Item>
-				</a>
-				<a href="https://google.com">
-					<Item>About</Item>
-				</a>
-				<a href="#projetos">
-					<Item>Projetos</Item>
-				</a>
-			</ListItem>
-		</Header>
+		<Fragment>
+			<Header>
+				<Logo>{`<RL/>`}</Logo>
+				<ListItem>
+					<a href="#home">
+						<Item>Home</Item>
+					</a>
+					<a href="https://google.com">
+						<Item>About</Item>
+					</a>
+					<a href="#projetos">
+						<Item>Projetos</Item>
+					</a>
+				</ListItem>
+				<BarProgress percentage={scrollPercentage} />
+			</Header>
+		</Fragment>
 	);
 };
 
