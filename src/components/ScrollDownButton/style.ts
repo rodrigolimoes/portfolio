@@ -4,7 +4,8 @@ export const ScrollDownButton = styled.a`
 		cursor: pointer;
 		width: 40px;
 		height: 40px;
-		border: 2px solid ${({ theme }) => theme.secondary};
+		border: 2px solid ${({ theme }) => theme.main};
+		background-color:${({ theme }) => theme.main} ;
 		border-radius: 50%;
 		position: relative;
 		bottom: -90px;
@@ -18,8 +19,8 @@ export const ScrollDownButton = styled.a`
 			left: 11px;
 			width: 15px;
 			height: 15px;
-			border-left: 2px solid ${({ theme }) => theme.secondary};
-			border-bottom: 2px solid ${({ theme }) => theme.secondary};
+			border-left: 3px solid ${({ theme }) => theme.bg};
+			border-bottom: 3px solid ${({ theme }) => theme.bg};
 			transform: rotate(-45deg);
 		}
 	}
