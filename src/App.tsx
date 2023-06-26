@@ -6,7 +6,7 @@ import Body from './layouts/Body';
 
 function App() {
 	return (
-		<ThemeProvider theme={{ main: '#2850E2' }}>
+		<ThemeProvider theme={{ main: '#2850E2', bg: '#E6FDFF' }}>
 			<GlobalStyle />
 			<HeaderApp />
 			<Body />
