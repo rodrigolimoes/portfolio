@@ -7,7 +7,7 @@ export const Content = styled.section`
 	padding: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
-	height: 95vh;
+	height: 94vh;
 	text-align: center;
 `;
 
@@ -30,15 +30,7 @@ export const Icons = styled.div`
 	justify-content: center;
 	margin-top: 15px;
 
-	i {
-		font-size: 2rem;
-		cursor: pointer;
-		color: ${props => props.theme.main};
-		transition: transform 1.5s;
+	> * {
 		margin: 0 20px;
-
-		&:hover {
-			transform: rotateY(360deg);
-		}
 	}
 `;
