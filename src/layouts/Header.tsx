@@ -4,6 +4,7 @@ import BarProgress from '../components/BarProgress';
 import { useScrollPercentage } from '../hooks/useScrollPercentage';
 
 const Header = styled.header`
+	z-index: 9999;
 	display: flex;
 	padding: 0;
 	margin: 0;
@@ -23,7 +24,7 @@ const ListItem = styled.ul`
 `;
 
 const Item = styled.li`
-	color: white;
+	color: ${({ theme }) => theme.bg};
 	padding: 0 10px;
 	margin-left: 5px;
 	background-color: ${props => props.theme.main};
@@ -32,7 +33,7 @@ const Item = styled.li`
 
 	&:hover {
 		color: ${props => props.theme.main};
-		background-color: white;
+		background-color: ${({ theme }) => theme.bg};
 	}
 `;
 
