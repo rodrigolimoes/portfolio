@@ -4,6 +4,7 @@ import Card from '../../components/Card/Card';
 import TextLimit from '../../components/TextLimit/TextLimit';
 import Button from '../../components/Button/Button';
 import img from '../../assets/img.png';
+import Tooltip from '../../components/Tooltip/Tooltip';
 
 interface ProjectSectionStateProps {}
 interface ProjectSectionDispatchProps {}
@@ -45,7 +46,9 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 						<Card.Img src={img} />
 						<Card.Content>
 							<Card.Title>{project.name}</Card.Title>
-							<TextLimit limitRow={2}>{project.description}</TextLimit>
+							<Tooltip text={project.description}>
+								<TextLimit limitRow={2}>{project.description}</TextLimit>
+							</Tooltip>
 						</Card.Content>
 						<Card.Footer>
 							<Button text={'ver mais'} outline />
