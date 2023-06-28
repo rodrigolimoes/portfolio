@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export interface InputButtonProps {
-	backgroundColor?: 'main';
+	backgroundColor?: 'main' | 'info';
 	size?: 'small' | 'medium' | 'large';
 	outline?: boolean;
 	icon?: string;
+	disabled?: boolean;
 }
 
 const fontSize = {
@@ -65,5 +66,19 @@ export const InputButton = styled.button<InputButtonProps>`
 			size ? iconFontSize[size] : iconFontSize['small']};
 		margin-right: ${({ size }) =>
 			size ? iconMargin[size] : iconMargin['small']};
+	}
+`;
+
+export const DisabledButton = styled(InputButton)`
+	cursor: initial;
+	border: 1px solid #e0e0e0;
+	color: #b6b6b6;
+	background: ${({ outline, theme }) => (outline ? theme.bg : '#e0e0e0')};
+
+	&:hover {
+		color: #b6b6b6;
+		background-color: ${({ outline, theme }) =>
+			outline ? theme.bg : '#e0e0e0'};
+		border: 1px solid #e0e0e0;
 	}
 `;
