@@ -4,7 +4,6 @@ export const Content = styled.section`
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
-	height: 94vh;
 `;
 
 export const HomeSection = styled(Content)`
@@ -12,22 +11,21 @@ export const HomeSection = styled(Content)`
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
+	height: 100vh;
+`;
+
+export const SkillsContent = styled(Content)`
+	min-height: 91vh;
+	color: white;
+	background-color: #153455;
 `;
 
 export const ProjectSection = styled(Content)`
-	align-items: center;
-	height: 85vh;
+	min-height: 91vh;
 
-	> div {
-		width: 100%;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		flex-wrap: wrap;
-	}
-
-	> div > div {
-		margin-bottom: 10px;
+	h1 {
+		margin-top: 20px;
+		color: ${({ theme }) => theme.main};
 	}
 `;
 

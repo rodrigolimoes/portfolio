@@ -1,10 +1,9 @@
 import React, { FC } from 'react';
 import { ProjectSection as ProjectSectionStyle } from './style';
-import Card from '../../components/Card/Card';
-import TextLimit from '../../components/TextLimit/TextLimit';
-import Button from '../../components/Button/Button';
-import img from '../../assets/img.png';
-import Tooltip from '../../components/Tooltip/Tooltip';
+import img from '../../assets/img_1.png';
+import img2 from '../../assets/testeImg.png';
+import ProjectResume from '../../components/ProjectResume/ProjectResume';
+import FadeInSection from '../../components/FadeInSection/FadeInSection';
 
 interface ProjectSectionStateProps {}
 interface ProjectSectionDispatchProps {}
@@ -18,14 +17,16 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 			name: 'Hbs-Markdown-helpers',
 			description:
 				'hbs-markdown-helpers provides some markdown helpers for use in the handlebars template',
-			img: '',
+			img: img2,
 			technologies: ['Typescript'],
-			url: '',
+			urlGithub: 'https://github.com/rodrigolimoes/hbs-markdown-helpers',
+			urlProject: 'https://www.npmjs.com/package/hbs-markdown-helpers',
 		},
 		{
 			name: 'Aplicação Full Stack - E-commerce',
-			description: 'Aplicação completa de sistema de E-commerce',
-			img: '',
+			description:
+				'`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution`',
+			img: img,
 			technologies: [
 				'Typescript',
 				'Nodejs',
@@ -34,28 +35,36 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 				'MongoDB',
 				'PostgreSQL',
 			],
-			url: '',
+			urlGithub: 'https://github.com/Bse-B2c',
+			urlProject: undefined,
 		},
 	];
+
+	const onOpen = (url: string) => window.open(url, '_blank');
+
 	return (
 		<ProjectSectionStyle id="projetos">
-			<h1 style={{ marginTop: '20px', color: '#2850E2' }}>Projetos</h1>
-			<div>
-				{projects.map((project, index) => (
-					<Card key={`${project.name}-${index}`}>
-						<Card.Img src={img} />
-						<Card.Content>
-							<Card.Title>{project.name}</Card.Title>
-							<Tooltip text={project.description}>
-								<TextLimit limitRow={2}>{project.description}</TextLimit>
-							</Tooltip>
-						</Card.Content>
-						<Card.Footer>
-							<Button text={'ver mais'} outline />
-						</Card.Footer>
-					</Card>
-				))}
-			</div>
+			<h1>Projetos</h1>
+			{projects.map((project, index) => (
+				<FadeInSection key={`${project.name}-${index}`}>
+					<div style={{ marginBottom: '30px' }}>
+						<ProjectResume
+							name={project.name}
+							description={project.description}
+							img={project.img}
+							technologies={project.technologies}
+							onClickOpenRepository={
+								project.urlGithub ? () => onOpen(project.urlGithub) : undefined
+							}
+							onClickViewProject={
+								project.urlProject
+									? () => onOpen(project.urlProject)
+									: undefined
+							}
+						/>
+					</div>
+				</FadeInSection>
+			))}
 		</ProjectSectionStyle>
 	);
 };
