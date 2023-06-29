@@ -1,8 +1,5 @@
 import React, { FC } from 'react';
 import { SkillsContent } from './style';
-import logo from '../../assets/logo192.png';
-import mongoLogo from '../../assets/mongoLogo.png';
-import gitLogo from '../../assets/gitLogo.png';
 import SkillCard from '../../components/SkillCard/SkillCard';
 import FadeInSection from '../../components/FadeInSection/FadeInSection';
 
@@ -12,8 +9,40 @@ interface SkillsDispatchProps {}
 type SkillsProps = SkillsStateProps & SkillsDispatchProps;
 
 const Skills: FC<SkillsProps> = () => {
+	const skills = [
+		{
+			name: 'ReactJS',
+			description:
+				'É uma biblioteca JavaScript de código aberto desenvolvida pelo Facebook para criar interfaces de usuário em aplicativos web.',
+		},
+		{
+			name: 'NodeJS',
+			description:
+				'É um ambiente de runtime JavaScript de código aberto, onde permite a execução de código JavaScript no lado do servidor.',
+		},
+		{
+			name: 'JavaScript',
+			description:
+				'É uma linguagem de programação de alto nível, iterpretada e multiplataforma. Muito utilizada em aplicações web.',
+		},
+		{
+			name: 'Typescript',
+			description:
+				'É uma linguagem de programação de código aberto desenvolvida pela Microsoft.',
+		},
+		{
+			name: 'MongoDb',
+			description:
+				'É um banco de dados não relacional de código aberto. ALtamente escalavel e flexível, permitindo o armazenamento de grandes volumes de dados.',
+		},
+		{
+			name: 'Git',
+			description:
+				'É um sistema de controle de versão distribuído amplamente utilizado para gerenciar o código-fonte de projetos de software.',
+		},
+	];
 	return (
-		<SkillsContent>
+		<SkillsContent id="skills">
 			<FadeInSection>
 				<h1>Habilidades</h1>
 				<div
@@ -22,48 +51,13 @@ const Skills: FC<SkillsProps> = () => {
 						justifyContent: 'space-between',
 						flexWrap: 'wrap',
 					}}>
-					<SkillCard
-						img={logo}
-						title={'ReactJS'}
-						description={
-							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'
-						}
-					/>
-					<SkillCard
-						img={logo}
-						title={'NodeJS'}
-						description={
-							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'
-						}
-					/>
-					<SkillCard
-						img={logo}
-						title={'Typescript'}
-						description={
-							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'
-						}
-					/>
-					<SkillCard
-						img={logo}
-						title={'JavaScript'}
-						description={
-							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'
-						}
-					/>
-					<SkillCard
-						img={mongoLogo}
-						title={'MongoDb'}
-						description={
-							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'
-						}
-					/>
-					<SkillCard
-						img={gitLogo}
-						title={'Git'}
-						description={
-							'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution'
-						}
-					/>
+					{skills.map((skill, index) => (
+						<SkillCard
+							key={`${skill.name}-${index}`}
+							title={skill.name}
+							description={skill.description}
+						/>
+					))}
 				</div>
 			</FadeInSection>
 		</SkillsContent>
