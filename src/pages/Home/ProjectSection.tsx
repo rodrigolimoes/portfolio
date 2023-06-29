@@ -16,24 +16,26 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 		{
 			name: 'Hbs-Markdown-helpers',
 			description:
-				'hbs-markdown-helpers provides some markdown helpers for use in the handlebars template',
+				'É uma biblioteca publicada no npm que fornece funções auxiliares de markdown para uso em Handlebars template.',
 			img: img2,
 			technologies: ['Typescript'],
 			urlGithub: 'https://github.com/rodrigolimoes/hbs-markdown-helpers',
 			urlProject: 'https://www.npmjs.com/package/hbs-markdown-helpers',
 		},
 		{
-			name: 'Aplicação Full Stack - E-commerce',
+			name: 'Aplicação web para criação de sistemas de comércio eletrônico',
 			description:
-				'`It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution`',
+				'Uma aplicação web que permite viabilizar a exibição e pedidos de produtos. Foram desenvolvidos 6 serviços e um Frontend.',
 			img: img,
 			technologies: [
 				'Typescript',
-				'Nodejs',
-				'ExpressJs',
-				'ReactJs',
-				'MongoDB',
+				'NodeJS',
+				'ExpressJS',
+				'API RESTful',
 				'PostgreSQL',
+				'MongoDB',
+				'ReactJS',
+				'ReduxJS',
 			],
 			urlGithub: 'https://github.com/Bse-B2c',
 			urlProject: undefined,
