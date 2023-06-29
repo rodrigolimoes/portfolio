@@ -10,6 +10,19 @@ type HomeContentProps = HomeContentStateProps & HomeContentDispatchProps;
 
 const HomeContent: FC<HomeContentProps> = () => {
 	const onOpen = (url: string) => window.open(url, '_blank');
+
+	const onDownloadCurriculum = () => {
+		fetch('curriculum.pdf').then(response => {
+			response.blob().then(blob => {
+				const fileUrl = window.URL.createObjectURL(blob);
+
+				let alink = document.createElement('a');
+				alink.href = fileUrl;
+				alink.download = 'curriculum.pdf';
+				alink.click();
+			});
+		});
+	};
 	return (
 		<HomeSection id="home">
 			<div>
@@ -34,7 +47,12 @@ const HomeContent: FC<HomeContentProps> = () => {
 					size="medium"
 					onClick={() => onOpen('https://www.linkedin.com/in/rodrigolimoes/')}
 				/>
-				<IconButton icon={'bi bi-file-earmark-pdf'} outline size="medium" />
+				<IconButton
+					icon={'bi bi-file-earmark-pdf'}
+					outline
+					size="medium"
+					onClick={onDownloadCurriculum}
+				/>
 			</Icons>
 			<ScrollDownButton href="#skills" />
 		</HomeSection>
