@@ -3,6 +3,7 @@ import GlobalStyle from './globalStyles';
 import HeaderApp from './layouts/Header';
 import { ThemeProvider } from 'styled-components';
 import Body from './layouts/Body';
+import Footer from './layouts/Footer';
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 			<GlobalStyle />
 			<HeaderApp />
 			<Body />
+			<Footer />
 		</ThemeProvider>
 	);
 }
