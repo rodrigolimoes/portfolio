@@ -18,7 +18,7 @@ const Skills: FC<SkillsProps> = () => {
 		{
 			name: 'NodeJS',
 			description:
-				'É um ambiente de runtime JavaScript de código aberto, onde permite a execução de código JavaScript no lado do servidor.',
+				'É um ambiente de tempo de execução JavaScript de código aberto que permite a execução de código JavaScript no lado do servidor.',
 		},
 		{
 			name: 'JavaScript',
@@ -26,14 +26,14 @@ const Skills: FC<SkillsProps> = () => {
 				'É uma linguagem de programação de alto nível, iterpretada e multiplataforma. Muito utilizada em aplicações web.',
 		},
 		{
-			name: 'Typescript',
+			name: 'TypeScript',
 			description:
 				'É uma linguagem de programação de código aberto desenvolvida pela Microsoft.',
 		},
 		{
 			name: 'MongoDb',
 			description:
-				'É um banco de dados não relacional de código aberto. ALtamente escalavel e flexível, permitindo o armazenamento de grandes volumes de dados.',
+				'É um banco de dados não relacional de código aberto, altamente escalável e flexível, permitindo o armazenamento de grandes volumes de dados.',
 		},
 		{
 			name: 'Git',
