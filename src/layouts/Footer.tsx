@@ -42,7 +42,8 @@ const Footer: FC<FooterProps> = () => {
 		<FooterContent>
 			<FooterLogo>{`<RL/>`}</FooterLogo>
 			<p>
-				Esse portfolio foi desenvolvido por rodrigo Limões. <br />
+				Portfólio desenvolvido por Rodrigo Limões.
+				<br />
 				<span>E-mail: rdglimoes@gmail.com</span>
 			</p>
 
