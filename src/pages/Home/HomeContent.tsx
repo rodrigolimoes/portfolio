@@ -9,6 +9,7 @@ interface HomeContentDispatchProps {}
 type HomeContentProps = HomeContentStateProps & HomeContentDispatchProps;
 
 const HomeContent: FC<HomeContentProps> = () => {
+	const onOpen = (url: string) => window.open(url, '_blank');
 	return (
 		<HomeSection id="home">
 			<div>
@@ -21,11 +22,21 @@ const HomeContent: FC<HomeContentProps> = () => {
 				</Paragraph>
 			</div>
 			<Icons>
-				<IconButton icon={'bi bi-github'} outline size="medium" />
-				<IconButton icon={'bi bi-linkedin'} outline size="medium" />
+				<IconButton
+					icon={'bi bi-github'}
+					outline
+					size="medium"
+					onClick={() => onOpen('https://github.com/rodrigolimoes')}
+				/>
+				<IconButton
+					icon={'bi bi-linkedin'}
+					outline
+					size="medium"
+					onClick={() => onOpen('https://www.linkedin.com/in/rodrigolimoes/')}
+				/>
 				<IconButton icon={'bi bi-file-earmark-pdf'} outline size="medium" />
 			</Icons>
-			<ScrollDownButton />
+			<ScrollDownButton href="#skills" />
 		</HomeSection>
 	);
 };
