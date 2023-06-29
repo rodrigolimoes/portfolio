@@ -23,6 +23,23 @@ const HomeContent: FC<HomeContentProps> = () => {
 			});
 		});
 	};
+
+	const calcAge = (birthDate: { day: number; month: number; year: number }) => {
+		const currentDate = new Date();
+		const currentMonth = currentDate.getMonth() + 1;
+		let age = currentDate.getFullYear() - birthDate.year;
+
+		if (
+			currentMonth < birthDate.month ||
+			(currentMonth === birthDate.month &&
+				currentDate.getDate() < birthDate.day)
+		) {
+			age--;
+		}
+
+		return age < 0 ? 0 : age;
+	};
+
 	return (
 		<HomeSection id="home">
 			<div>
@@ -31,7 +48,8 @@ const HomeContent: FC<HomeContentProps> = () => {
 				<br />
 				<HomeTitle>Developer</HomeTitle>
 				<Paragraph margin="15px 0">
-					Tenho 24 anos, tenho 2 anos em experiência na área de aplicações web
+					Tenho {calcAge({ day: 21, month: 9, year: 1998 })} e sou um
+					desenvolvedor web com 2 anos de experiência na área.
 				</Paragraph>
 			</div>
 			<Icons>

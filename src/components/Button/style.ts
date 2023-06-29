@@ -56,7 +56,8 @@ export const InputButton = styled.button<InputButtonProps>`
 
 	&:hover {
 		color: white;
-		background-color: #1b40c5;
+		background-color: ${({ outline, theme, backgroundColor = 'main' }) =>
+			outline ? theme[backgroundColor as any] : '#1b40c5'};
 		border: 1px solid
 			${({ theme, backgroundColor = 'main' }) => theme[backgroundColor as any]};
 	}
