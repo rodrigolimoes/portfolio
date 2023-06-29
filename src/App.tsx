@@ -3,7 +3,7 @@ import GlobalStyle from './globalStyles';
 import HeaderApp from './layouts/Header';
 import { ThemeProvider } from 'styled-components';
 import Body from './layouts/Body';
-//#007DFB
+
 function App() {
 	return (
 		<ThemeProvider

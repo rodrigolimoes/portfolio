@@ -15,6 +15,11 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
 			color: black;
     }
+
+    :target {
+      scroll-margin-top: 9vh;
+			scroll-behavior: smooth;
+    }
 `;
 
 export default withTheme(GlobalStyle);
