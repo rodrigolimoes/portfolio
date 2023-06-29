@@ -55,13 +55,12 @@ const HeaderApp: FC<HeaderAppProps> = () => {
 	return (
 		<Fragment>
 			<Header>
-				<Logo>{`<RL/>`}</Logo>
+				<a href="#home">
+					<Logo>{`<RL/>`}</Logo>
+				</a>
 				<ListItem>
-					<a href="#home">
-						<Item>Home</Item>
-					</a>
-					<a href="https://google.com">
-						<Item>About</Item>
+					<a href="#skills">
+						<Item>Habilidades</Item>
 					</a>
 					<a href="#projetos">
 						<Item>Projetos</Item>
