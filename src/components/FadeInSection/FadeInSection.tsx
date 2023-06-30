@@ -10,7 +10,7 @@ type FadeInSectionProps = FadeInSectionStateProps & FadeInSectionDispatchProps;
 
 const FadeInSection: FC<FadeInSectionProps> = ({ children }) => {
 	const [isVisible, setVisible] = useState(false);
-	const domRef = useRef<any>();
+	const domRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
 		let observerRefValue: null | any = null;
