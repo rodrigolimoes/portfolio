@@ -1,6 +1,6 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-import BarProgress from '../components/BarProgress';
+import BarProgress from '../components/BarProgress/BarProgress';
 import { useScrollPercentage } from '../hooks/useScrollPercentage';
 
 const Header = styled.header`
@@ -49,25 +49,23 @@ const HeaderApp: FC<HeaderAppProps> = () => {
 	const scrollPercentage = useScrollPercentage();
 
 	return (
-		<Fragment>
-			<Header>
-				<a href="#home">
-					<Logo>{`<RL/>`}</Logo>
+		<Header>
+			<a href="#about">
+				<Logo>{`<RL/>`}</Logo>
+			</a>
+			<ListItem>
+				<a href="#about">
+					<Item>Início</Item>
 				</a>
-				<ListItem>
-					<a href="#home">
-						<Item>Início</Item>
-					</a>
-					<a href="#skills">
-						<Item>Habilidades</Item>
-					</a>
-					<a href="#projetos">
-						<Item>Projetos</Item>
-					</a>
-				</ListItem>
-				<BarProgress percentage={scrollPercentage} />
-			</Header>
-		</Fragment>
+				<a href="#skills">
+					<Item>Habilidades</Item>
+				</a>
+				<a href="#projetos">
+					<Item>Projetos</Item>
+				</a>
+			</ListItem>
+			<BarProgress percentage={scrollPercentage} />
+		</Header>
 	);
 };
 

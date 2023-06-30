@@ -1,6 +1,6 @@
 import React, { FC, Fragment } from 'react';
-import HomeContent from './HomeContent';
-import ProjectSection from './ProjectSection';
+import About from './About';
+import Projects from './Projects';
 import Skills from './Skills';
 
 interface HomeStateProps {}
@@ -11,9 +11,9 @@ type HomeProps = HomeStateProps & HomeDispatchProps;
 const Home: FC<HomeProps> = () => {
 	return (
 		<Fragment>
-			<HomeContent />
+			<About />
 			<Skills />
-			<ProjectSection />
+			<Projects />
 		</Fragment>
 	);
 };

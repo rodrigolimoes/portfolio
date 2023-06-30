@@ -1,23 +1,22 @@
 import React, { FC } from 'react';
 import { ProjectSection as ProjectSectionStyle } from './style';
-import hbsMarkdownHelpers from '../../assets/hbsMarkdownHelpers.png';
-import comercioEletronico from '../../assets/comercioEletronico.png';
+import hbsMarkdownHelpersImg from '../../assets/hbsMarkdownHelpers.png';
+import comercioEletronicoImg from '../../assets/comercioEletronico.png';
 import ProjectResume from '../../components/ProjectResume/ProjectResume';
 import FadeInSection from '../../components/FadeInSection/FadeInSection';
 
-interface ProjectSectionStateProps {}
-interface ProjectSectionDispatchProps {}
+interface ProjectsStateProps {}
+interface ProjectsDispatchProps {}
 
-type ProjectSectionProps = ProjectSectionStateProps &
-	ProjectSectionDispatchProps;
+type ProjectsProps = ProjectsStateProps & ProjectsDispatchProps;
 
-const ProjectSection: FC<ProjectSectionProps> = () => {
+const Projects: FC<ProjectsProps> = () => {
 	const projects = [
 		{
 			name: 'Hbs-Markdown-helpers',
 			description:
 				'É uma biblioteca publicada no npm que fornece funções auxiliares de markdown para uso em Handlebars template.',
-			img: hbsMarkdownHelpers,
+			img: hbsMarkdownHelpersImg,
 			technologies: ['TypeScript'],
 			urlGithub: 'https://github.com/rodrigolimoes/hbs-markdown-helpers',
 			urlProject: 'https://www.npmjs.com/package/hbs-markdown-helpers',
@@ -26,7 +25,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 			name: 'Aplicação web para criação de sistemas de comércio eletrônico',
 			description:
 				'Esta aplicação permite viabilizar a exibição e a venda de produtos. Durante o desenvolvimento, foram criados 6 serviços e 1 frontend para garantir seu pleno funcionamento.',
-			img: comercioEletronico,
+			img: comercioEletronicoImg,
 			technologies: [
 				'TypeScript',
 				'NodeJS',
@@ -71,4 +70,4 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 	);
 };
 
-export default ProjectSection;
+export default Projects;

@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
-import { HomeSection, HomeTitle, Icons, Paragraph } from './style';
+import { AboutSection, AboutTitle, Icons, Paragraph } from './style';
 import IconButton from '../../components/IconButton/IconButton';
 import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton';
 
-interface HomeContentStateProps {}
-interface HomeContentDispatchProps {}
+interface AboutStateProps {}
+interface AboutDispatchProps {}
 
-type HomeContentProps = HomeContentStateProps & HomeContentDispatchProps;
+type AboutProps = AboutStateProps & AboutDispatchProps;
 
-const HomeContent: FC<HomeContentProps> = () => {
+const About: FC<AboutProps> = () => {
 	const onOpen = (url: string) => window.open(url, '_blank');
 
 	const calcAge = (birthDate: { day: number; month: number; year: number }) => {
@@ -28,17 +28,19 @@ const HomeContent: FC<HomeContentProps> = () => {
 	};
 
 	return (
-		<HomeSection id="home">
+		<AboutSection id="about">
 			<div>
 				<Paragraph margin="7px 0">Ola, sou o Rodrigo Limões</Paragraph>
-				<HomeTitle>Full Stack</HomeTitle>
+				<AboutTitle>Full Stack</AboutTitle>
 				<br />
-				<HomeTitle>Developer</HomeTitle>
-				<Paragraph margin="15px 0">
-					Tenho {calcAge({ day: 21, month: 9, year: 1998 })} anos e sou um
-					desenvolvedor Full Stack com 2 anos <br /> de experiência em
-					desenvolvimento web.
-				</Paragraph>
+				<AboutTitle>Developer</AboutTitle>
+				<div>
+					<Paragraph margin="15px 0">
+						Tenho {calcAge({ day: 21, month: 9, year: 1998 })} anos e sou um
+						desenvolvedor Full Stack com 2 anos de experiência em
+						desenvolvimento web.
+					</Paragraph>
+				</div>
 			</div>
 			<Icons>
 				<IconButton
@@ -65,8 +67,8 @@ const HomeContent: FC<HomeContentProps> = () => {
 				/>
 			</Icons>
 			<ScrollDownButton href="#skills" />
-		</HomeSection>
+		</AboutSection>
 	);
 };
 
-export default HomeContent;
+export default About;

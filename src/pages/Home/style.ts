@@ -6,12 +6,31 @@ export const Content = styled.section`
 	padding: 20px;
 `;
 
-export const HomeSection = styled(Content)`
+export const AboutSection = styled(Content)`
 	text-align: center;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	height: 100vh;
+
+	div > div {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+
+		> * {
+			width: 60%;
+
+			@media only screen and (max-width: 579px) and (min-width: 768px) {
+				width: 90%;
+			}
+
+			@media only screen and (max-width: 579px) {
+				width: 100%;
+			}
+		}
+	}
 `;
 
 export const SkillsContent = styled(Content)`
@@ -29,7 +48,7 @@ export const ProjectSection = styled(Content)`
 	}
 `;
 
-export const HomeTitle = styled.h1`
+export const AboutTitle = styled.h1`
 	display: inline-block;
 	font-size: 3.5rem;
 	font-weight: 800;
