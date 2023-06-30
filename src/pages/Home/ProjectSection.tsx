@@ -25,7 +25,7 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 		{
 			name: 'Aplicação web para criação de sistemas de comércio eletrônico',
 			description:
-				'Esta aplicação foi criada como parte do trabalho de conclusão do curso de Ciência da Computação. Seu objetivo é viabilizar a exibição e venda de produtos. Durante o desenvolvimento, foram criados 6 serviços e 1 frontend para garantir seu pleno funcionamento.',
+				'Esta aplicação permite viabilizar a exibição e a venda de produtos. Durante o desenvolvimento, foram criados 6 serviços e 1 frontend para garantir seu pleno funcionamento.',
 			img: comercioEletronico,
 			technologies: [
 				'TypeScript',
