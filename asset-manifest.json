@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.d6e44fe0.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/comercioEletronico.png": "/portfolio/static/media/comercioEletronico.9f3babe6b9401b3cab29.png",
+    "static/media/hbsMarkdownHelpers.png": "/portfolio/static/media/hbsMarkdownHelpers.7ccdeb7f4cc7db05b200.png",
+    "index.html": "/portfolio/index.html",
+    "main.d6e44fe0.js.map": "/portfolio/static/js/main.d6e44fe0.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d6e44fe0.js"
+  ]
+}
