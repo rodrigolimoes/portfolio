@@ -25,16 +25,12 @@ const ListItem = styled.ul`
 `;
 
 const Item = styled.li`
-	color: ${({ theme }) => theme.bg};
 	padding: 0 10px;
-	margin-left: 5px;
-	background-color: ${props => props.theme.main};
 
 	border-radius: 50px;
 
 	&:hover {
 		color: ${props => props.theme.main};
-		background-color: ${({ theme }) => theme.bg};
 	}
 `;
 
@@ -59,6 +55,9 @@ const HeaderApp: FC<HeaderAppProps> = () => {
 					<Logo>{`<RL/>`}</Logo>
 				</a>
 				<ListItem>
+					<a href="#home">
+						<Item>Início</Item>
+					</a>
 					<a href="#skills">
 						<Item>Habilidades</Item>
 					</a>
