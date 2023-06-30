@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ProjectSection as ProjectSectionStyle } from './style';
-import img from '../../assets/img_1.png';
-import img2 from '../../assets/testeImg.png';
+import hbsMarkdownHelpers from '../../assets/hbsMarkdownHelpers.png';
+import comercioEletronico from '../../assets/comercioEletronico.png';
 import ProjectResume from '../../components/ProjectResume/ProjectResume';
 import FadeInSection from '../../components/FadeInSection/FadeInSection';
 
@@ -17,18 +17,18 @@ const ProjectSection: FC<ProjectSectionProps> = () => {
 			name: 'Hbs-Markdown-helpers',
 			description:
 				'É uma biblioteca publicada no npm que fornece funções auxiliares de markdown para uso em Handlebars template.',
-			img: img2,
-			technologies: ['Typescript'],
+			img: hbsMarkdownHelpers,
+			technologies: ['TypeScript'],
 			urlGithub: 'https://github.com/rodrigolimoes/hbs-markdown-helpers',
 			urlProject: 'https://www.npmjs.com/package/hbs-markdown-helpers',
 		},
 		{
 			name: 'Aplicação web para criação de sistemas de comércio eletrônico',
 			description:
-				'Uma aplicação web que permite viabilizar a exibição e pedidos de produtos. Foram desenvolvidos 6 serviços e um Frontend.',
-			img: img,
+				'Esta aplicação foi criada como parte do trabalho de conclusão do curso de Ciência da Computação. Seu objetivo é viabilizar a exibição e venda de produtos. Durante o desenvolvimento, foram criados 6 serviços e 1 frontend para garantir seu pleno funcionamento.',
+			img: comercioEletronico,
 			technologies: [
-				'Typescript',
+				'TypeScript',
 				'NodeJS',
 				'ExpressJS',
 				'API RESTful',
