@@ -48,8 +48,9 @@ const HomeContent: FC<HomeContentProps> = () => {
 				<br />
 				<HomeTitle>Developer</HomeTitle>
 				<Paragraph margin="15px 0">
-					Tenho {calcAge({ day: 21, month: 9, year: 1998 })} e sou um
-					desenvolvedor web com 2 anos de experiência na área.
+					Tenho {calcAge({ day: 21, month: 9, year: 1998 })} anos e sou um
+					desenvolvedor Full Stack com 2 anos <br /> de experiência em
+					desenvolvimento web.
 				</Paragraph>
 			</div>
 			<Icons>
