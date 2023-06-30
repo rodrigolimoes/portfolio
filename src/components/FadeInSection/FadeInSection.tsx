@@ -13,16 +13,22 @@ const FadeInSection: FC<FadeInSectionProps> = ({ children }) => {
 	const domRef = useRef<any>();
 
 	useEffect(() => {
+		let observerRefValue: null | any = null;
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) setVisible(entry.isIntersecting);
 			});
 		});
 
-		observer.observe(domRef?.current);
+		if (domRef.current) {
+			observer.observe(domRef?.current);
+			observerRefValue = domRef?.current;
+		}
 
 		return () => {
-			if (domRef?.current) observer.unobserve(domRef?.current);
+			if (observerRefValue) {
+				observer.unobserve(observerRefValue);
+			}
 		};
 	}, []);
 
