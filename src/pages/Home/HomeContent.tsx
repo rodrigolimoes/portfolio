@@ -11,19 +11,6 @@ type HomeContentProps = HomeContentStateProps & HomeContentDispatchProps;
 const HomeContent: FC<HomeContentProps> = () => {
 	const onOpen = (url: string) => window.open(url, '_blank');
 
-	const onDownloadCurriculum = () => {
-		fetch('curriculum.pdf').then(response => {
-			response.blob().then(blob => {
-				const fileUrl = window.URL.createObjectURL(blob);
-
-				let alink = document.createElement('a');
-				alink.href = fileUrl;
-				alink.download = 'curriculum.pdf';
-				alink.click();
-			});
-		});
-	};
-
 	const calcAge = (birthDate: { day: number; month: number; year: number }) => {
 		const currentDate = new Date();
 		const currentMonth = currentDate.getMonth() + 1;
@@ -70,7 +57,11 @@ const HomeContent: FC<HomeContentProps> = () => {
 					icon={'bi bi-file-earmark-pdf'}
 					outline
 					size="medium"
-					onClick={onDownloadCurriculum}
+					onClick={() =>
+						onOpen(
+							'https://docs.google.com/document/d/1IHC-rG3nL1BH0D4slZtRS6oalI8mCV1d8nP14vgtA1c/edit?usp=sharing'
+						)
+					}
 				/>
 			</Icons>
 			<ScrollDownButton href="#skills" />
